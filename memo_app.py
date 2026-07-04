@@ -11,3 +11,22 @@ whileTrue:
 show_menu()
 
 choice=input("番号を選んでください: ")
+
+whileTrue:
+show_menu()
+
+choice=input("番号を選んでください: ")
+
+ifchoice=="1":
+print("メモを追加します")
+elifchoice=="2":
+print("メモ一覧を表示します")
+elifchoice=="3":
+print("メモを検索します")
+elifchoice=="4":
+print("メモを削除します")
+elifchoice=="5":
+print("アプリを終了します")
+break
+else:
+print("1〜5の番号を入力してください")
