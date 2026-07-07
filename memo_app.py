@@ -1,3 +1,6 @@
+memos = []
+
+
 def show_menu():
     print("==== メモ管理アプリ ====")
     print("1. メモを追加")
@@ -5,6 +8,11 @@ def show_menu():
     print("3. メモを検索")
     print("4. メモを削除")
     print("5. 終了")
+
+def add_memo():
+    memo = input("追加するメモを入力してください: ")
+    memos.append(memo)
+    print("メモを追加しました")
 
 
 while True:
