@@ -14,6 +14,14 @@ def add_memo():
     memos.append(memo)
     print("メモを追加しました")
 
+def show_memos():
+    if len(memos) == 0:
+        print("メモはまだありません")
+    else:
+        print("==== メモ一覧 ====")
+        for index, memo in enumerate(memos, start=1):
+            print(f"{index}. {memo}")
+
 
 while True:
     show_menu()
