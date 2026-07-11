@@ -14,6 +14,7 @@ def add_memo():
     memos.append(memo)
     print("メモを追加しました")
 
+
 def show_memos():
     if len(memos) == 0:
         print("メモはまだありません")
@@ -21,6 +22,16 @@ def show_memos():
         print("==== メモ一覧 ====")
         for index, memo in enumerate(memos, start=1):
             print(f"{index}. {memo}")
+
+
+def search_memos():
+    keyword = input("検索するキーワードを入力してください: ")
+
+    found = False
+
+    print("==== 検索結果 ====")
+
+          
 
 
 while True:
