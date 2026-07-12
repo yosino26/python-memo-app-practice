@@ -31,7 +31,13 @@ def search_memos():
 
     print("==== 検索結果 ====")
 
-          
+     for index, memo in enumerate(memos, start=1):
+        if keyword in memo:
+            print(f"{index}. {memo}")
+            found = True
+
+    if not found:
+        print("該当するメモはありません")         
 
 
 while True:
