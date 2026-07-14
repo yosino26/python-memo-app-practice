@@ -9,6 +9,7 @@ def show_menu():
     print("4. メモを削除")
     print("5. 終了")
 
+
 def add_memo():
     memo = input("追加するメモを入力してください: ")
     memos.append(memo)
@@ -31,13 +32,13 @@ def search_memos():
 
     print("==== 検索結果 ====")
 
-     for index, memo in enumerate(memos, start=1):
+    for index, memo in enumerate(memos, start=1):
         if keyword in memo:
             print(f"{index}. {memo}")
             found = True
 
     if not found:
-        print("該当するメモはありません")         
+        print("該当するメモはありません")
 
 
 while True:
@@ -46,11 +47,11 @@ while True:
     choice = input("番号を選んでください: ")
 
     if choice == "1":
-        print("メモを追加します")
+        add_memo()
     elif choice == "2":
-        print("メモ一覧を表示します")
+        show_memos()
     elif choice == "3":
-        print("メモを検索します")
+        search_memos()
     elif choice == "4":
         print("メモを削除します")
     elif choice == "5":
