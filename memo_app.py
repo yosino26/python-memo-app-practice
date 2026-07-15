@@ -39,6 +39,13 @@ def search_memos():
 
     if not found:
         print("該当するメモはありません")
+        
+def delete_memo():
+    if len(memos) == 0:
+        print("削除できるメモはありません")
+        return
+
+    show_memos()        
 
 
 while True:
