@@ -39,13 +39,25 @@ def search_memos():
 
     if not found:
         print("該当するメモはありません")
-        
+
 def delete_memo():
     if len(memos) == 0:
         print("削除できるメモはありません")
         return
 
-    show_memos()        
+    show_memos()
+    
+    delete_number = input("削除するメモの番号を入力してください: ")
+
+    if not delete_number.isdigit():
+        print("番号を入力してください")
+        return
+
+    delete_index = int(delete_number) - 1
+
+    if delete_index < 0 or delete_index >= len(memos):
+        print("存在しない番号です")
+        return     
 
 
 while True:
