@@ -58,6 +58,8 @@ def delete_memo():
     if delete_index < 0 or delete_index >= len(memos):
         print("存在しない番号です")
         return     
+    deleted_memo = memos.pop(delete_index)
+    print(f"メモを削除しました: {deleted_memo}")        
 
 
 while True:
@@ -72,7 +74,7 @@ while True:
     elif choice == "3":
         search_memos()
     elif choice == "4":
-        print("メモを削除します")
+        delete_memo()
     elif choice == "5":
         print("アプリを終了します")
         break
