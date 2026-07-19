@@ -61,6 +61,12 @@ def delete_memo():
     deleted_memo = memos.pop(delete_index)
     print(f"メモを削除しました: {deleted_memo}")        
 
+def save_memos():
+    with open("memos.txt", "w", encoding="utf-8") as file:
+        for memo in memos:
+            file.write(memo + "\n")
+
+    print("メモを保存しました")
 
 while True:
     show_menu()
