@@ -82,6 +82,7 @@ while True:
     elif choice == "4":
         delete_memo()
     elif choice == "5":
+        save_memos()
         print("アプリを終了します")
         break
     else:
