@@ -67,6 +67,14 @@ def save_memos():
             file.write(memo + "\n")
 
     print("メモを保存しました")
+    
+def load_memos():
+    try:
+        with open("memos.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                memos.append(line.strip())
+
+        print("保存済みメモを読み込みました")    
 
 while True:
     show_menu()
