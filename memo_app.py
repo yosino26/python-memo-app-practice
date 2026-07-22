@@ -74,7 +74,12 @@ def load_memos():
             for line in file:
                 memos.append(line.strip())
 
-        print("保存済みメモを読み込みました")    
+        print("保存済みメモを読み込みました")  
+
+    except FileNotFoundError:
+        print("保存済みメモはありません")          
+
+load_memos()
 
 while True:
     show_menu()
